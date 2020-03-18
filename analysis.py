@@ -6,7 +6,7 @@ import pandas as pd
 # creation of neat statistical graphics
 import seaborn as sns
 # matplotlib.pyplot library for plotting of histograms 
-# in this code
+# in this script
 import matplotlib.pyplot as plt
 
 # This attaches a nice looking grid to matplotlib plots
