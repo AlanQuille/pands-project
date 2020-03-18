@@ -1,0 +1,25 @@
+The Iris Flower data set was introduced in 1936 in an article written by the statistician Ronald Fisher called "The Use of Multiple Measurements in Taxonomic problems. It is also called Anderson Iris Dataset after Edgar Anderson, the individual who collected the measurements of the flowers in the dataset.
+
+It consists of 3 classes of 50 instances with 4 attributes, namely sepal and petal length and width. The 3 classes in question are species of iris flower and they are setosa, versicolor and viriginica. The attributes are length and width of the sepals and petals of the flowers.
+
+http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+
+@book{bari2016predictive,
+  title={Predictive Analytics For Dummies},
+  author={Bari, A. and Chaouchi, M. and Jung, T.},
+  isbn={9781119267010},
+  url={https://books.google.ie/books?id=VRQYDQAAQBAJ},
+  year={2016},
+  publisher={Wiley}
+}
+
+@book{nelli2015python,
+  title={Python Data Analytics: Data Analysis and Science using pandas, matplotlib and the Python Programming Language},
+  author={Nelli, F.},
+  isbn={9781484209585},
+  url={https://books.google.ie/books?id=f1F1CgAAQBAJ},
+  year={2015},
+  publisher={Apress}
+}
+
+
