@@ -1,31 +1,46 @@
+# this imports pandas module to load in 
+# dataframes for quick and easy reading and writing
+# to external files and doing statistics on the dataset
 import pandas as pd
+# this library is base on matplotlib and allows for
+# creation of neat statistical graphics
 import seaborn as sns
+# matplotlib.pyplot library for plotting of histograms 
+# in this code
 import matplotlib.pyplot as plt
+
+# This attaches a nice looking grid to matplotlib plots
 sns.set()
 
+# This reads in the Iris Flower data set from iris.txt
 df = pd.read_csv("iris.txt")
-print(df.head())
 
+# This outputs a summary of statistics for the Iris Flower data set to 
+# a file called summary.txt. The data in the file is separated by commas
+# as in a .csv file
 print(df.describe().to_csv("summary.txt", index=False))
 
-attribute_list = list(df)[0:4]
-print(attribute_list)
+# This creates histograms of the columns in the Iris Flower data set
+# (not separated by species)
+df.hist()
 
-species_list = df['species'].unique()
+# This saves the result as histograms.png
+plt.savefig("histograms.png")
 
-def hist_output(attributes, dataframe):
-    for i in attributes:
-        temp_df = df[i]
-         # This is to do a histogram for each
-         # species, not necessary
-       #  for sp in species_list:
-        histogram = temp_df.hist()
-        #plt.savefig(i + "_" + sp + "_" + "hist.png")
-        plt.savefig(i + "_"  + "hist.png")
-        plt.clf()
+# This creates scatter plots and histograms of the columns in the data set
+# and the data is clearly demarcated by species using the hue and 
+# markers options
+sns.pairplot(df, hue="species", markers=["o", "x", "D"])
 
-hist_output(attribute_list, df)
+# This saves the result as pairplot_species.png
+plt.savefig("pairplot_species.png")
 
-#plt.show()
+# This shows the histograms (not separated by species) as Figure 1 
+# and the pairplot (histograms + scatter plots separated by species)
+# is shown as Figure 2
+plt.show()
+
+
+
 
 
