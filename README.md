@@ -1,4 +1,5 @@
 # pands-project
-This is the repository for my Programming and Scripting project.[1]
+This is the repository for my Programming and Scripting project [1](#References)
 
-[1]: Reference
+#References
+[1] Reference
