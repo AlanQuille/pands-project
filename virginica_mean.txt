@@ -1,0 +1,4 @@
+sepal_length,6.587999999999998
+sepal_width,2.9739999999999998
+petal_length,5.552
+petal_width,2.026
