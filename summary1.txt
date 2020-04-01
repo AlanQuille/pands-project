@@ -1,0 +1,13 @@
+Mean
+length,5.005999999999999
+sepal_width,3.4180000000000006
+petal_length,1.464
+petal_width,0.2439999999999999
+sepal_length,6.587999999999998
+sepal_width,2.9739999999999998
+petal_length,5.552
+petal_width,2.026
+sepal_length,5.936
+sepal_width,2.7700000000000005
+petal_length,4.26
+petal_width,1.3259999999999998
