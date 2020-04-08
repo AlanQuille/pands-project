@@ -1,11 +1,14 @@
 # pands-project
 ##### Michael Alan Murphy-Quille
-This repository contains the files **analysis.ipynb**, **analysis.html**, **analysis.py** and **summary.txt**.
+<br>
+This repository contains the files **analysis.ipynb**, **analysis.html**, **analysis.pdf** and **analysis.py** and **summary.txt**.
 
 ## analysis.ipynb
 This is the primary file of the project. It contains the report written in Jupyter Notebook and can be read directly from Github. Link:
 
 [https://github.com/AlanQuille/pands-project/blob/master/analysis.ipynb](https://github.com/AlanQuille/pands-project/blob/master/analysis.ipynb)
+
+Note: the table of contents does not function from Github. This is enabled if Jupyter Notebook is used to open the file. Alternatively, **analysis.html** or **analysis.pdf** have working table of contents
 
 ## analysis.html
 This is a html version of **analysis.ipynb**. It contains all the data (but not the functionality) from **analysis.ipynb** and is present as a backup in case **analysis.ipynb** cannot be read. Link:
