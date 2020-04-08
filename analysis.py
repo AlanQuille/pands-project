@@ -12,9 +12,7 @@
 # 
 #     3.1. [Import libraries](#31)
 #     
-#     3.2  [Opening "summary.txt"](#32)
-#     
-#     3.3. [Read in Iris flower dataset from csv file](#33)
+#     3.2. [Read in Iris flower dataset from csv file](#33)
 #     
 # 4. [Exploration](#exploration)
 #    
@@ -32,6 +30,8 @@
 #     
 #     4.7 [Correlations between pairs of attributes](#47)
 #     
+#     4.8 [Summary.txt](#48)
+#     
 # 5. [Conclusions](#conclusions)
 # 
 # 6. [Bibliography](#bibliography)
@@ -43,7 +43,7 @@
 # 
 # The variation in the flowers is described by 4 attributes, namely sepal length, sepal width, petal length and petal width. The 3 species of flowers are setosa, versicolor and virginica. There are 50 data points for each species with 150 data points (or instances) in total. [2](#ref2)
 # 
-# It consists of 3 classes of 50 instances with 4 attributes, namely sepal and petal length and width. The 3 classes in question are species of iris flower and they are setosa, versicolor and viriginica. The attributes are length and width of the sepals and petals of the flowers.[3](#ref3)
+# It consists of 3 classes of 50 instances with 4 attributes, namely sepal and petal length and width. The 3 classes in question are species of iris flower and they are setosa, versicolor and viriginica. The attributes are length and width of the sepals and petals of the flowers. [3](#ref3)
 # 
 # The project will follow the standard data analytics procedure of questioning, wrangling, exploration and drawing conclusions. This report forms the final stage of this process (reporting).
 
@@ -55,7 +55,7 @@
 # 2. What are the median values of the attributes for different species of Iris flower?
 # 3. Do they differ by a large margin? If so, what does that mean for the distributions of the attributes?
 # 4. Are the attributes normally distributed?
-# 5. What is the difference between average values of the attributes for different species of Iris Flower?
+# 5. What are the differences between average values of the attributes for different species of Iris Flower?
 # 6. Are these differences statistically significant?
 # 7. What is the correlation between the various attributes for different species of Iris flower?
 # 
@@ -66,57 +66,54 @@
 
 # ### 3.1 Import libraries <a name="31"></a>
 
-# In[1]:
+# In[1013]:
 
 
-#Import pandas to import and display CSV data as dataframe
+# Import pandas to import and display CSV data as dataframe
 import pandas as pd
-#Import and start seaborn to make plots look better
+# Import and start seaborn to make plots look better
 import seaborn as sns
 sns.set()
-#Import scipy library for tests for statistical significance
+# Import scipy library for tests for statistical significance
 from scipy import stats
-#Import pyplot for more plotting options
+# Import pyplot for more plotting options
 import matplotlib.pyplot as plt
-#Import shapiro for Shapiro-Wilk test for normality
+# Import shapiro for Shapiro-Wilk test for normality
 from scipy.stats import shapiro
+# Import os for file removal
+import os
 
 
-# ### 3.2 Opening "summary.txt" <a name="32"></a>
-
-# In[44]:
-
-
-# summary.txt is opened so results can be exported
-f = open('summary.txt','a+')
-
-
-# ### 3.3 Read in Iris flower dataset from csv file <a name="33"></a>
+# ### 3.2 Read in Iris flower dataset from csv file <a name="33"></a>
 # 
 # The data is then set as a Pandas dataframe called df. This dataframe has the attributes petal length, petal width, sepal length , sepal width and the species of each flower collected in the sample. The data is loaded into the dataframe in the following cell:
 
-# In[3]:
+# In[1014]:
 
 
 #df is the main dataframe that will be used.
 df = pd.read_csv("iris.csv")
+print(df)
+print("\n")
 
 
 # The first 5 entries of the dataframe are shown in the following cell:
 
-# In[4]:
+# In[1015]:
 
 
-df.head()
+print(df.head())
+print("\n")
 
 
 # The number of null, N/A or blank entries must be determined to see if data is missing:
 
-# In[5]:
+# In[1016]:
 
 
 #Find the null, blank or N/A entries and sum them.
-df.isnull().sum()
+print(df.isnull().sum())
+print("\n")
 
 
 # It can be seen that there are no null or blank entries so it can be assumed for this analysis that no data is missing.
@@ -125,7 +122,7 @@ df.isnull().sum()
 # ## 4 Exploration <a name="exploration"></a>
 # The data is summarised using the **pairplot** functtion from the **seaborn** module:
 
-# In[6]:
+# In[1017]:
 
 
 sns.pairplot(df, hue="species", markers=["o", "x", "D"])
@@ -135,7 +132,7 @@ sns.pairplot(df, hue="species", markers=["o", "x", "D"])
 # 1. The distributions of the attributes for setosa, versicolor and virginica appear to approximate normal distributions. 
 # 2. The average value for sepal length of virginica seems to be larger than for versicolor, which is larger than setosa.
 # 3. The average value for sepal width of setosa seems to be larger than for versicolor, which is approximately equal to virginica.
-# 4. The average value for virginica seems to be larger than for versicolor, which is much larger than setosa.
+# 4. The average value for the petal length and width of virginica seems to be larger than for versicolor, which is much larger than setosa.
 # 5. All the attributes seem to be positively correlated to varying degrees for all species of flower. 
 # 6. Setosa seems to have weak positive correlations between its attributes except for one pair (sepal width and sepal length).
 # 
@@ -146,40 +143,57 @@ sns.pairplot(df, hue="species", markers=["o", "x", "D"])
 
 # #### Setosa
 
-# In[7]:
+# In[1018]:
 
 
-df[df['species']=='setosa'].mean()
+print(df[df['species']=='setosa'].mean())
+print("\n")
 
 
 # #### Virginica
 
-# In[8]:
+# In[1019]:
 
 
-df[df['species']=='virginica'].mean()
+print(df[df['species']=='virginica'].mean())
+print("\n")
 
 
 # #### Versicolour
 
-# In[9]:
+# In[1020]:
 
 
-df[df['species']=='versicolor'].mean()
-
+print(df[df['species']=='versicolor'].mean())
+print("\n")
 
 # #### Output to files
 
-# In[46]:
+# In[1021]:
 
 
-# Output to files
-f.write('\n')
-f.write('Mean')
-f.write('\n')
-df[df['species']=='setosa'].mean().to_csv("summary.txt", header=False, index=True, mode='a')
-df[df['species']=='virginica'].mean().to_csv("summary.txt", header=False, index=True, mode='a')
-df[df['species']=='versicolor'].mean().to_csv("summary.txt", header=False, index=True, mode='a')
+# Output means to summary1.txt
+with open("summary1.txt", 'w') as f:
+    f.write("Means for setosa, virginica and versicolor respectively")
+    f.write("\n")
+    f.write("\n")
+
+
+# In[1022]:
+
+
+with open("summary1.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='setosa'].mean().to_csv("summary1.txt", header=False, index=True, mode='a')
+
+with open("summary1.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='virginica'].mean().to_csv("summary1.txt", header=False, index=True, mode='a')
+
+with open("summary1.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='versicolor'].mean().to_csv("summary1.txt", header=False, index=True, mode='a')
+    f.write("\n")
 
 
 # Now the average values are calculated for each attribute for each species, the median and mode values can be calculated as follows:
@@ -190,38 +204,58 @@ df[df['species']=='versicolor'].mean().to_csv("summary.txt", header=False, index
 
 # #### Setosa
 
-# In[11]:
+# In[1023]:
 
 
-df[df['species']=='setosa'].median()
+print(df[df['species']=='setosa'].median())
+print("\n")
 
 
 # #### Virginica
 
-# In[12]:
+# In[1024]:
 
 
-df[df['species']=='virginica'].median()
+print(df[df['species']=='virginica'].median())
+print("\n")
 
 
 # #### Versicolour
 
-# In[13]:
+# In[1025]:
 
 
-df[df['species']=='versicolor'].median()
+print(df[df['species']=='versicolor'].median())
+print("\n")
 
 
-# In[14]:
+# #### Output to files
+
+# In[1026]:
 
 
-# Output to files
-f.write('\n')
-f.write('Median')
-f.write('\n')
-df[df['species']=='setosa'].median().to_csv("summary.txt", header=False, index=True, mode='a')
-df[df['species']=='virginica'].median().to_csv("summary.txt", header=False, index=True, mode='a')
-df[df['species']=='versicolor'].median().to_csv("summary.txt", header=False, index=True, mode='a')
+# Output medians to summary2.txt
+with open("summary2.txt", 'w') as f:
+    f.write("Medians for setosa, virginica and versicolor respectively")
+    f.write("\n")
+    f.write("\n")
+
+
+# In[1027]:
+
+
+with open("summary2.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='setosa'].median().to_csv("summary2.txt", header=False, index=True, mode='a')
+
+with open("summary2.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='virginica'].median().to_csv("summary2.txt", header=False, index=True, mode='a')
+
+with open("summary2.txt", 'a') as f:
+    f.write("\n")
+    df[df['species']=='versicolor'].median().to_csv("summary2.txt", header=False, index=True, mode='a')
+    f.write("\n")
 
 
 # ### 4.3 Difference between medians and means <a name="43"></a>
@@ -230,52 +264,69 @@ df[df['species']=='versicolor'].median().to_csv("summary.txt", header=False, ind
 
 # #### Setosa
 
-# In[15]:
+# In[1028]:
 
 
 diff1 = 100* (df[df['species']=='setosa'].mean() - df[df['species']=='setosa'].median())/(df[df['species']=='setosa'].mean())
-diff1
+print(diff1)
 
 
 # #### Virginica
 
-# In[16]:
+# In[1029]:
 
 
 diff2 = 100* (df[df['species']=='virginica'].mean() - df[df['species']=='virginica'].median())/(df[df['species']=='virginica'].mean())
-diff2
+print(diff2)
 
 
 # #### Versicolour
 
-# In[17]:
+# In[1030]:
 
 
 diff3 = 100* (df[df['species']=='versicolor'].mean() - df[df['species']=='versicolor'].median())/(df[df['species']=='versicolor'].mean())
-diff3
+print(diff3)
+
+
+# #### Output to files
+
+# In[1031]:
+
+
+# Output differences between medians and means to summary3.txt
+with open("summary3.txt", 'w') as f:
+    f.write("Differences between medians and means for setosa, virginica and versicolor respectively.")
+    f.write("\n")
+    f.write("\n")
+
+
+# In[1032]:
+
+
+with open("summary3.txt", 'a') as f:
+    f.write("\n")
+    diff1.to_csv("summary3.txt", header=False, index=True, mode='a')
+
+with open("summary3.txt", 'a') as f:
+    f.write("\n")
+    diff2.to_csv("summary3.txt", header=False, index=True, mode='a')
+
+with open("summary3.txt", 'a') as f:
+    f.write("\n")
+    diff3.to_csv("summary3.txt", header=False, index=True, mode='a')
+    f.write("\n")
 
 
 # For most of the values, the difference between the mean and the median is small or neglible which indicates that the attributes  approximate the normal distribution (a perfect normal distribution would have the same value for mean and median). There is a -2% difference between the mean and median for versicolour and setosa petal length which indicates that the distribution is slightly left-skewed but still a good approximation to the normal distribution. For setosa petal width, there is an 18% difference between the mean and the median indicating a moderate skew to the right. This calls into question whether petal width for setosa is a good approximation to the normal distribution.
 # 
 # In order to rigorously test whether the attribute are normally distrbuted, the Shapiro-Wilk test is employed [4](#ref4)
 
-# In[18]:
-
-
-# Output to files
-f.write('\n') 
-f.write('Differences between means and medians')
-f.write('\n')
-diff1.to_csv("summary.txt", header=False, index=True, mode='a')
-diff2.to_csv("summary.txt", header=False, index=True, mode='a')
-diff3.to_csv("summary.txt", header=False, index=True, mode='a')
-
-
 # ### 4.4 Shapiro-Wilk test for normality <a name="44"></a>
 # This test works by setting a cut-off value (in this case 0.05). The test is performed on the data. If the p-value extracted from the test exceeds alpha, then we cannot reject the null hypothesis that the sample approximates a normal or Gaussian distribution. Otherwise, we can safely reject the null hypothesis and say the distribution is not normal.
 # The test is conducted for the attributes of all species of Iris flower by writing an appropriate function:
 
-# In[19]:
+# In[1033]:
 
 
 # Function to perform Shapiro-Wilk test for normality on attributes of flowers in data set
@@ -288,29 +339,30 @@ def shapiro_test(attribute, sp):
         print("Null hypothesis is not rejected, sample approximates normal distribution")
     else:
         print("Null hypothesis is rejected, sample does not approximate normal distribution")
+    print("\n")
 
 
 # #### Setosa
 
-# In[20]:
+# In[1034]:
 
 
 shapiro_test("petal_length", "setosa")
 
 
-# In[21]:
+# In[1035]:
 
 
 shapiro_test("petal_width", "setosa")
 
 
-# In[22]:
+# In[1036]:
 
 
 shapiro_test("sepal_length", "setosa")
 
 
-# In[23]:
+# In[1037]:
 
 
 shapiro_test("sepal_width", "setosa")
@@ -318,25 +370,25 @@ shapiro_test("sepal_width", "setosa")
 
 # #### Virginica
 
-# In[24]:
+# In[1038]:
 
 
 shapiro_test("petal_length", "virginica")
 
 
-# In[25]:
+# In[1039]:
 
 
 shapiro_test("petal_width", "virginica")
 
 
-# In[26]:
+# In[1040]:
 
 
 shapiro_test("sepal_length", "virginica")
 
 
-# In[27]:
+# In[1041]:
 
 
 shapiro_test("sepal_width", "virginica")
@@ -344,25 +396,25 @@ shapiro_test("sepal_width", "virginica")
 
 # #### Versicolour
 
-# In[28]:
+# In[1042]:
 
 
 shapiro_test("petal_length", "versicolor")
 
 
-# In[29]:
+# In[1043]:
 
 
 shapiro_test("petal_width", "versicolor")
 
 
-# In[30]:
+# In[1044]:
 
 
 shapiro_test("sepal_length", "versicolor")
 
 
-# In[31]:
+# In[1045]:
 
 
 shapiro_test("sepal_width", "versicolor")
@@ -375,37 +427,54 @@ shapiro_test("sepal_width", "versicolor")
 # ### 4.5 Difference between means <a name="45"></a>
 # The difference between the means are calculated with the **mean** function:
 
-# In[32]:
+# In[1046]:
 
 
 mnd1 = df[df['species']=='versicolor'].mean() - df[df['species']=='setosa'].mean() 
-mnd1
+print(mnd1)
 
 
-# In[33]:
+# In[1047]:
 
 
 mnd2 = df[df['species']=='virginica'].mean() - df[df['species']=='setosa'].mean() 
-mnd2 
+print(mnd2) 
 
 
-# In[34]:
+# In[1048]:
 
 
 mnd3 = df[df['species']=='virginica'].mean() - df[df['species']=='versicolor'].mean() 
-mnd3
+print(mnd3)
 
 
-# In[35]:
+# #### Output to files
+
+# In[1049]:
 
 
-# Output to files
-f.write('\n') 
-f.write('Differences between means')
-f.write('\n')
-mnd1.to_csv("summary.txt", header=False, index=True, mode='a')
-mnd2.to_csv("summary.txt", header=False, index=True, mode='a')
-mnd3.to_csv("summary.txt", header=False, index=True, mode='a')
+# Output differences between means to summary4.txt
+with open("summary4.txt", 'w') as f:
+    f.write("Differences between means for versicolor/setosa, virginica/setosa and virginica/versicolor respectively.")
+    f.write("\n")
+    f.write("\n")
+
+
+# In[1050]:
+
+
+with open("summary4.txt", 'a') as f:
+    f.write("\n")
+    mnd1.to_csv("summary4.txt", header=False, index=True, mode='a')
+
+with open("summary4.txt", 'a') as f:
+    f.write("\n")
+    mnd2.to_csv("summary4.txt", header=False, index=True, mode='a')
+
+with open("summary4.txt", 'a') as f:
+    f.write("\n")
+    mnd3.to_csv("summary4.txt", header=False, index=True, mode='a')
+    f.write("\n")
 
 
 # These results indicate that:
@@ -427,7 +496,7 @@ mnd3.to_csv("summary.txt", header=False, index=True, mode='a')
 # 
 # The function to perform the test for two independant groups is defined as follows:
 
-# In[36]:
+# In[1051]:
 
 
 def ind_test(group1, group2):
@@ -441,7 +510,7 @@ def ind_test(group1, group2):
 
 # For 3 independant groups, a one-way ANOVA table is generated. The code to generate the table is as follows:
 
-# In[37]:
+# In[1052]:
 
 
 def anova_table(group1, group2, group3):
@@ -454,11 +523,12 @@ def anova_table(group1, group2, group3):
     #Degrees of freedom 2
     print ("Df2: ")
     print (len(group1) +len(group2)-2)
+    print("\n")
 
 
 # These tests are used to see if the difference between the means are statistically significant:
 
-# In[38]:
+# In[1053]:
 
 
 # create three dataframes for each species without the species column
@@ -480,41 +550,61 @@ anova_table(df1, df2, df3)
 
 # #### Setosa
 
-# In[39]:
+# In[1054]:
 
 
 corr1 = df[df['species']=='setosa'].corr(method="pearson")
-corr1
+print(corr1)
+print("\n")
 
 
 # #### Virginica
 
-# In[40]:
+# In[1055]:
 
 
 corr2 = df[df['species']=='virginica'].corr(method="pearson")
-corr2
+print(corr2)
+print("\n")
 
 
 # #### Versicolour
 
-# In[41]:
+# In[1056]:
 
 
 corr3 = df[df['species']=='versicolor'].corr(method="pearson")
-corr3
+print(corr3)
+print("\n")
 
 
-# In[42]:
+# #### Output to files
+
+# In[1057]:
 
 
-# Output to files
-f.write('\n')
-f.write('Correlations')
-f.write('\n')
-corr1.to_csv("summary.txt", header=False, index=True, mode='a')
-corr2.to_csv("summary.txt", header=False, index=True, mode='a')
-corr3.to_csv("summary.txt", header=False, index=True, mode='a')
+# Output correlation matrices to summary5.txt
+with open("summary5.txt", 'w') as f:
+    f.write("Correlation matrices for setosa, virginica and versicolour respectively.")
+    f.write("\n")
+    f.write("\n")
+
+
+# In[1058]:
+
+
+with open("summary5.txt", 'a') as f:
+    f.write("\n")
+    corr1.to_csv("summary5.txt", header=False, index=True, mode='a')
+
+with open("summary5.txt", 'a') as f:
+    f.write("\n")
+    corr2.to_csv("summary5.txt", header=False, index=True, mode='a')
+
+with open("summary5.txt", 'a') as f:
+    f.write("\n")
+    corr3.to_csv("summary5.txt", header=False, index=True, mode='a')
+    f.write("\n")
 
 
 # These results indicate that:
@@ -528,16 +618,53 @@ corr3.to_csv("summary.txt", header=False, index=True, mode='a')
 # 8. Versiscolour petal width and petal length are highly correlated.
 # 9. All other attributes for versicolour are moderately correlated.
 
+# ### 4.8 Summary.txt  <a name="48"></a>
+# The summary files are combined into one file called "summary.txt" using the following method:
+
+# In[1059]:
+
+
+# This code takes each summary file and combines it into one file
+# summary.txt
+
+data_array = []
+
+# This array opens the summary files and puts them
+# in the array data_array
+for i in range(1, 6):
+    fin = open("summary" + str(i) +".txt", "r")
+    data_array.append(fin.read())
+    fin.close()
+    # Delete superfluous summary files after 
+    # data is extracted from them
+    os.remove("summary" + str(i) +".txt")
+
+# combined_data is all the data collected from
+# the summary files.
+combined_data = ""
+
+# This adds up all the data 
+# in data_array
+for i in data_array:
+    combined_data += i
+    
+# This outputs combined_data
+# to summary_txt
+fout = open("summary.txt", "w")
+fout.write(combined_data)
+fout.close()
+
+
 # ## 5 Conclusions  <a name="conclusions"></a>
 # The following conclusions can be made from the preceding data analysis:
 # 
-# 1. What the average or mean values are for each attribute for each species of flower (present in full in mean.txt)
-# 2. What the median values are for each attribute for each species of flower (present in full in median.txt)
-# 3. The difference between the mean and the median values is mostly small or negligble except setosa petal width which has a moderate ifference between its mean and median.
+# 1. What the average or mean values are for each attribute for each species of flower.
+# 2. What the median values are for each attribute for each species of flower.
+# 3. The difference between the mean and the median values is mostly small or negligble except setosa petal width which has a moderate difference between its mean and median.
 # 4. All but two of the attributes for each species is flower is normally distributed (the two datasets that fail the test for normality are versicolor petal widths and setosa petal widths)
-# 5. What the difference between the means are for each species of flower (present in full in mean_differences.txt)
+# 5. What the difference between the means are for each species of flower.
 # 6. The differences between the means are statistically significant and unlikely to be due to sampling error.
-# 7. What the correlations are for each pair of attribute for each species of flower (present in full in correlations.txt)
+# 7. What the correlations are for each pair of attribute for each species of flower.
 # 
 # Further study can be done using machine learning. In particular, a classification algorithm such as decision trees can be used to predict the species of flower based on this dataset.
 
