@@ -3,17 +3,17 @@
 <br>
 This repository contains the files **analysis.ipynb**, **analysis.html**, **analysis.py** and **summary.txt**.
 
-
+The read the report for this project, please open **analysis.html**. 
 
 ## analysis.ipynb
 This is the primary file of the project. It contains the report written in Jupyter Notebook along with the Python code written for the report and can be read directly from Github. Link:
 
 [https://github.com/AlanQuille/pands-project/blob/master/analysis.ipynb](https://github.com/AlanQuille/pands-project/blob/master/analysis.ipynb)
 
-**Note:** the table of contents (TOC) does not function from Github. Please open  **analysis.html** to read the project report which has a functioning TOC. Alternatively, one can use Jupyter Notebook to open **analysis.ipynb**.
+**Note:** the table of contents (TOC) does not function from Github. Please open  **analysis.html** to read the project report with a functioning TOC. Alternatively, one can use Jupyter Notebook to open **analysis.ipynb**.
 
 ## analysis.html
-This is a html version of **analysis.ipynb**. It contains all the data (but not the functionality) from **analysis.ipynb**. Link:
+This is a HTML version of **analysis.ipynb**. It contains all the data (but not the functionality) from **analysis.ipynb**. Link:
 
 [https://github.com/AlanQuille/pands-project/blob/master/analysis.html](https://github.com/AlanQuille/pands-project/blob/master/analysis.html)
 
