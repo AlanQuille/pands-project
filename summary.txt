@@ -34,7 +34,7 @@ petal_length,4.35
 petal_width,1.3
 
 
-Differences between medians and means for setosa, virginica and versicolor respectively.
+Percentage differences between medians and means for setosa, virginica and versicolor respectively.
 
 sepal_length,0.11985617259287534
 sepal_width,0.5266237565828168

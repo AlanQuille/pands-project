@@ -125,8 +125,7 @@ print("\n")
 # In[1017]:
 
 
-sns.pairplot(df, hue="species", markers=["o", "x", "D"])
-
+# sns.pairplot(df, hue="species", markers=["o", "x", "D"])
 
 # ... as can be seen from the graphs:
 # 1. The distributions of the attributes for setosa, versicolor and virginica appear to approximate normal distributions. 
@@ -145,7 +144,6 @@ sns.pairplot(df, hue="species", markers=["o", "x", "D"])
 
 # In[1018]:
 
-
 print(df[df['species']=='setosa'].mean())
 print("\n")
 
@@ -153,7 +151,6 @@ print("\n")
 # #### Virginica
 
 # In[1019]:
-
 
 print(df[df['species']=='virginica'].mean())
 print("\n")
@@ -269,6 +266,7 @@ with open("summary2.txt", 'a') as f:
 
 diff1 = 100* (df[df['species']=='setosa'].mean() - df[df['species']=='setosa'].median())/(df[df['species']=='setosa'].mean())
 print(diff1)
+print("\n")
 
 
 # #### Virginica
@@ -278,6 +276,7 @@ print(diff1)
 
 diff2 = 100* (df[df['species']=='virginica'].mean() - df[df['species']=='virginica'].median())/(df[df['species']=='virginica'].mean())
 print(diff2)
+print("\n")
 
 
 # #### Versicolour
@@ -287,6 +286,7 @@ print(diff2)
 
 diff3 = 100* (df[df['species']=='versicolor'].mean() - df[df['species']=='versicolor'].median())/(df[df['species']=='versicolor'].mean())
 print(diff3)
+print("\n")
 
 
 # #### Output to files
@@ -296,7 +296,7 @@ print(diff3)
 
 # Output differences between medians and means to summary3.txt
 with open("summary3.txt", 'w') as f:
-    f.write("Differences between medians and means for setosa, virginica and versicolor respectively.")
+    f.write("Percentage differences between medians and means for setosa, virginica and versicolor respectively.")
     f.write("\n")
     f.write("\n")
 
@@ -432,6 +432,7 @@ shapiro_test("sepal_width", "versicolor")
 
 mnd1 = df[df['species']=='versicolor'].mean() - df[df['species']=='setosa'].mean() 
 print(mnd1)
+print("\n")
 
 
 # In[1047]:
@@ -439,6 +440,7 @@ print(mnd1)
 
 mnd2 = df[df['species']=='virginica'].mean() - df[df['species']=='setosa'].mean() 
 print(mnd2) 
+print("\n")
 
 
 # In[1048]:
@@ -446,6 +448,7 @@ print(mnd2)
 
 mnd3 = df[df['species']=='virginica'].mean() - df[df['species']=='versicolor'].mean() 
 print(mnd3)
+print("\n")
 
 
 # #### Output to files
