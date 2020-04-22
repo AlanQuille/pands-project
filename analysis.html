@@ -13158,7 +13158,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import pandas to import and display CSV data as dataframe</span>
@@ -13184,14 +13184,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="3.2-Read-in-Iris-flower-dataset-from-csv-file-">3.2 Read in Iris flower dataset from csv file <a name="32" /><a class="anchor-link" href="#3.2-Read-in-Iris-flower-dataset-from-csv-file-">&#182;</a></h3><p>The data is then set as a Pandas dataframe called <strong>df</strong>. This dataframe has the attributes <strong>petal length</strong>, <strong>petal width</strong>, <strong>sepal length</strong> , <strong>sepal width</strong> and the <strong>species</strong> of each flower collected in the sample. The data is loaded into the dataframe in the following cell:</p>
+<h3 id="3.2-Read-in-Iris-flower-dataset-from-csv-file-">3.2 Read in Iris flower dataset from csv file <a name="32" /><a class="anchor-link" href="#3.2-Read-in-Iris-flower-dataset-from-csv-file-">&#182;</a></h3><p>The data is then set as a Pandas dataframe called <strong>df</strong>. This dataframe has the attributes <strong>petal length</strong>, <strong>petal width</strong>, <strong>sepal length</strong>, <strong>sepal width</strong> and the <strong>species</strong> of each flower collected in the sample. The data is loaded into the dataframe in the following cell:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># df is the main dataframe that will be used.</span>
@@ -13213,7 +13213,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show 5 entries in dataframe to show.</span>
@@ -13230,7 +13230,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13322,10 +13322,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Find the null, blank or N/A entries and sum them.</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find the null, blank or N/A entries and sum them.</span>
 <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 
@@ -13339,7 +13339,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -13378,7 +13378,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">])</span>
@@ -13394,13 +13394,13 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x2cd24f64288&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x12434a0bb48&gt;</pre>
 </div>
 
 </div>
@@ -13431,7 +13431,7 @@ dtype: int64</pre>
 <ol>
 <li>The distributions of the attributes for setosa, versicolor and virginica appear to approximate normal distributions. </li>
 <li>The average value for sepal length of virginica seems to be larger than for versicolor, which is larger than setosa.</li>
-<li>The average value for sepal width of setosa seems to be larger than for versicolor, which is approximately equal to virginica.</li>
+<li>The average value for sepal width of setosa seems to be larger than for virginica, which is slightly larger than for versicolor.</li>
 <li>The average value for the petal length and width of virginica seems to be larger than for versicolor, which is much larger than setosa.</li>
 <li>All the attributes seem to be positively correlated to varying degrees for all species of flower. </li>
 <li>Setosa seems to have weak positive correlations between its attributes except for one pair (sepal width and sepal length).</li>
@@ -13458,7 +13458,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13474,7 +13474,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -13502,7 +13502,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13518,7 +13518,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13546,7 +13546,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13562,7 +13562,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -13590,11 +13590,12 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output means to summary1.txt</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;summary1.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># Include heading and spaces for readability</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Means for setosa, virginica and versicolor respectively&quot;</span><span class="p">)</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13607,11 +13608,11 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These functions append (using mode=&#39;a&#39;) the average values to summary1.txt for</span>
-<span class="c1"># setosa, virginica and versicolor respectively</span>
+<span class="c1"># setosa, virginica and versicolor respectively using the to_csv function from the pandas module</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;summary1.txt&quot;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;summary1.txt&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
@@ -13663,7 +13664,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -13679,7 +13680,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -13707,7 +13708,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -13723,7 +13724,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13751,7 +13752,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -13767,7 +13768,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13795,7 +13796,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output medians to summary2.txt</span>
@@ -13812,7 +13813,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These functions append (using mode=&#39;a&#39;) the median values to summary2.txt for</span>
@@ -13846,7 +13847,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The percentage difference between the means and the medians are calculated as follows:</p>
+<p>The difference between the means and the medians expressed as a percentage of the mean are calculated as follows:</p>
 
 </div>
 </div>
@@ -13860,10 +13861,12 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff1</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">mean1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">diff1</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">diff1</span><span class="o">/</span><span class="n">mean1</span>
 <span class="n">diff1</span>
 </pre></div>
 
@@ -13877,7 +13880,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13905,10 +13908,12 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff2</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">mean2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">diff2</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">diff2</span><span class="o">/</span><span class="n">mean2</span>
 <span class="n">diff2</span>
 </pre></div>
 
@@ -13922,7 +13927,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13950,10 +13955,12 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff3</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+<span class="n">mean3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">diff3</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">diff3</span><span class="o">/</span><span class="n">mean3</span>
 <span class="n">diff3</span>
 </pre></div>
 
@@ -13967,7 +13974,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -13995,7 +14002,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output differences between medians and means to summary3.txt</span>
@@ -14012,7 +14019,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These functions append (using mode=&#39;a&#39;) the percentage difference between mean and median values to summary3.txt for</span>
@@ -14039,7 +14046,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For most of the values, the difference between the mean and the median is small or neglible which indicates that the attributes  approximate the normal distribution (a perfect normal distribution would have the same value for mean and median) <a href="#ref4">4</a>. There is a -2% difference between the mean and median for versicolour and setosa petal length which indicates that the distribution is slightly left-skewed but still a good approximation to the normal distribution. For setosa petal width, there is an 18% difference between the mean and the median indicating a moderate skew to the right. This calls into question whether petal width for setosa is a good approximation to the normal distribution.</p>
+<p>For most of the values, the difference between the mean and the median is small or neglible which indicates that the attributes  approximate the normal distribution (a perfect normal distribution would have the same value for mean and median) <a href="#ref4">4</a>. There is a -2% and -2.5% difference between the mean and median for versicolour and setosa petal length respectively which indicates that the distribution is slightly left-skewed but still a good approximation to the normal distribution. For setosa petal width, there is an 18% difference between the mean and the median indicating a moderate skew to the right. This calls into question whether petal width for setosa is a good approximation to the normal distribution.</p>
 <p>In order to rigorously test whether the attribute are normally distrbuted, the Shapiro-Wilk test is employed <a href="#ref5">5</a></p>
 
 </div>
@@ -14048,7 +14055,7 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.4-Shapiro-Wilk-test-for-normality-">4.4 Shapiro-Wilk test for normality <a name="44" /><a class="anchor-link" href="#4.4-Shapiro-Wilk-test-for-normality-">&#182;</a></h3><p>This test works by setting a cut-off value (in this case 0.05). The test is performed on the data. If the p-value extracted from the test exceeds alpha, then we cannot reject the null hypothesis that the sample approximates a normal or Gaussian distribution. Otherwise, we can safely reject the null hypothesis and say the distribution is not normal.
+<h3 id="4.4-Shapiro-Wilk-test-for-normality-">4.4 Shapiro-Wilk test for normality <a name="44" /><a class="anchor-link" href="#4.4-Shapiro-Wilk-test-for-normality-">&#182;</a></h3><p>This test works by setting a cut-off value called alpha (in this case alpha=0.05). The test is performed on the data. If the p-value extracted from the test exceeds alpha, then we cannot reject the null hypothesis that the sample approximates a normal distribution. Otherwise, we can safely reject the null hypothesis and say the distribution is not normal.
 The test is conducted for the attributes of all species of Iris flower by writing an appropriate function:</p>
 
 </div>
@@ -14056,15 +14063,20 @@ The test is conducted for the attributes of all species of Iris flower by writin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to perform Shapiro-Wilk test for normality on attributes of flowers in data set</span>
 <span class="k">def</span> <span class="nf">shapiro_test</span><span class="p">(</span><span class="n">attribute</span><span class="p">,</span> <span class="n">sp</span><span class="p">):</span>
+    <span class="c1"># Cut off value</span>
     <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+    <span class="c1"># the attribute and species to be tested</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">sp</span><span class="p">][</span><span class="n">attribute</span><span class="p">]</span>
+    <span class="c1"># Test statistic and p-value</span>
     <span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">shapiro</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="c1"># Output results to screen</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;test statistic: </span><span class="si">{}</span><span class="s2">, p-value: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+    <span class="c1"># If p-value exceeds cut-off value</span>
     <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">alpha</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Null hypothesis is not rejected, sample approximates normal distribution&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -14085,7 +14097,7 @@ The test is conducted for the attributes of all species of Iris flower by writin
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;setosa&quot;</span><span class="p">)</span>
@@ -14117,7 +14129,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;setosa&quot;</span><span class="p">)</span>
@@ -14149,7 +14161,7 @@ Null hypothesis is rejected, sample does not approximate normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;setosa&quot;</span><span class="p">)</span>
@@ -14181,7 +14193,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;setosa&quot;</span><span class="p">)</span>
@@ -14220,7 +14232,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;virginica&quot;</span><span class="p">)</span>
@@ -14252,7 +14264,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;virginica&quot;</span><span class="p">)</span>
@@ -14284,7 +14296,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;virginica&quot;</span><span class="p">)</span>
@@ -14316,7 +14328,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;virginica&quot;</span><span class="p">)</span>
@@ -14355,7 +14367,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;versicolor&quot;</span><span class="p">)</span>
@@ -14387,7 +14399,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;versicolor&quot;</span><span class="p">)</span>
@@ -14419,7 +14431,7 @@ Null hypothesis is rejected, sample does not approximate normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span> <span class="s2">&quot;versicolor&quot;</span><span class="p">)</span>
@@ -14451,7 +14463,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shapiro_test</span><span class="p">(</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span> <span class="s2">&quot;versicolor&quot;</span><span class="p">)</span>
@@ -14507,7 +14519,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mnd1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
@@ -14524,7 +14536,7 @@ Null hypothesis is not rejected, sample approximates normal distribution
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -14552,7 +14564,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mnd2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
@@ -14569,7 +14581,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -14597,7 +14609,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mnd3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
@@ -14614,7 +14626,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -14642,7 +14654,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output differences between means to summary4.txt</span>
@@ -14659,7 +14671,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These functions append (using mode=&#39;a&#39;) the percentage difference between mean values to summary4.txt for</span>
@@ -14700,30 +14712,33 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.6-Test-for-statistical-significance-">4.6 Test for statistical significance <a name="46" /><a class="anchor-link" href="#4.6-Test-for-statistical-significance-">&#182;</a></h3><p>The appropriate test for significance for the difference between means between two independant groups is the independant t-test <a href="#ref6">6</a>. In order to conduct the t-test, it is necessary that the variances are homogeneous and that the dependant variable is normally distrbuted within each group. This technically means that the test is not appropriate for versicolor petal widths and the setosa petal widths as it was previously shown that they fail the Shapiro-Wilk test for normality. However, the independant t-test is robust to moderate violations of normality and homogenity as long as:</p>
+<h3 id="4.6-Test-for-statistical-significance-">4.6 Test for statistical significance <a name="46" /><a class="anchor-link" href="#4.6-Test-for-statistical-significance-">&#182;</a></h3><p>The appropriate test for significance for the difference between means between two independant groups is the independant t-test <a href="#ref6">6</a>. In order to conduct the t-test, it is necessary that the variances are homogeneous and that the dependant variable is normally distrbuted within each group. This technically means that the test is not appropriate for versicolor petal widths and the setosa petal widths as it was previously shown that they fail the Shapiro-Wilk test for normality. However, the independant t-test is robust to moderate violations of normality and homogenity (i.e. the samples having different variances) as long as:</p>
 <ol>
 <li>The sample sizes are the same. <a href="#ref7">7</a></li>
 <li>The sample size of each group is greater than or equal to 30.</li>
+<li>If the variance of one group is not more than 4 times larger than the variance of the other group.</li>
 </ol>
-<p>Each and every attribute has 50 data points for each species of Iris flower so both these conditions are met. Judging by the histograms at the beginning of section 4, the violations of normality for versicolor and setosa petal widths are small because the distributions physically resemble normal distributions. As such, the independant t-test will be conducted for every group.</p>
-<p>The t-test produces test statistics and p-value. When the p-value is less than 0.05, than we can reject the null hypothesis that the means are equal. if it is greater than or equal to 0.05, than we cannot reject the null hypothesis that the means are the same.</p>
-<p>The function to perform the test for two independant groups is defined as follows:</p>
+<p>Each and every attribute has 50 data points for each species of Iris flower so conditions 1 and 2 are met. Condition three is tested as follows:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ind_test</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">):</span>
-     <span class="c1">#Independant two sample t-test for difference between means of groups with difference variances</span>
-     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Independent two sample t-test for groups with different means: &quot;</span><span class="p">)</span>
-     <span class="nb">print</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span> <span class="s1">&#39;omit&#39;</span><span class="p">))</span>
-     <span class="c1">#Degrees of freedom</span>
-     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Degrees of freedom: &quot;</span><span class="p">)</span>
-     <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get standard deviations of all attributes for every species of flower</span>
+<span class="n">set_std</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">virg_std</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">vers_std</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Get variances of all attributes for every species of flower = std^2</span>
+<span class="n">set_var</span> <span class="o">=</span> <span class="n">set_std</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">virg_var</span> <span class="o">=</span> <span class="n">virg_std</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">vers_var</span> <span class="o">=</span> <span class="n">vers_std</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Divide one boy another to see how many times the variance of one group is larger than another</span>
 </pre></div>
 
     </div>
@@ -14734,26 +14749,156 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For 3 independant groups, a one-way ANOVA table is generated. The code to generate the table is as follows:</p>
+<h4 id="Versicolor-and-setosa">Versicolor and setosa<a class="anchor-link" href="#Versicolor-and-setosa">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vers_var</span><span class="o">/</span><span class="n">set_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>sepal_length    2.144345
+sepal_width     0.678259
+petal_length    7.334599
+petal_width     3.402344
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Virginica-and-setosa">Virginica and setosa<a class="anchor-link" href="#Virginica-and-setosa">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">virg_var</span><span class="o">/</span><span class="n">set_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[76]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>sepal_length     3.254295
+sepal_width      0.716382
+petal_length    10.117137
+petal_width      6.562855
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Virginica-and-versicolor">Virginica and versicolor<a class="anchor-link" href="#Virginica-and-versicolor">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">virg_var</span><span class="o">/</span><span class="n">vers_var</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>sepal_length    1.517618
+sepal_width     1.056207
+petal_length    1.379372
+petal_width     1.928922
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>... as can be seen from the results, there are several violations of the third condition. The difference between the variances of virginica and setosa petal lengths are 10 times, the difference between the petal widths of same are 6.5 times. The differences between virginica and versicolor petal length variances are 10, the differences between petal width variances for same are 6.5 times. The variance difference for the petal lengths of versicolor and setosa are 7.3 times. However, the Welch's t-test (which is like the independant t-test but for unequal variances) can still be used. As before, if the p-value of the test is less than the cut-off value (in this case 0.05) then we can reject the null hypothesis that the means are the same. This is done as follows:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">anova_table</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span> <span class="n">group3</span><span class="p">):</span>
-    <span class="c1"># One way AnoVA table</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;One way ANOVA table: &quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span> <span class="n">group3</span><span class="p">))</span>
-    <span class="c1"># Degrees of freedom 1</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Df1: &quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group1</span><span class="p">)</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="c1"># Degrees of freedom 2</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Df2: &quot;</span><span class="p">)</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group1</span><span class="p">)</span> <span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ind_test</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">):</span>
+     <span class="c1"># Independant two sample t-test for difference between means of groups</span>
+     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Independent two sample t-test for groups with different means: &quot;</span><span class="p">)</span>
+     <span class="c1"># equal_var = False means that the Welch&#39;s t-test is used for samples with unequal variances</span>
+     <span class="nb">print</span> <span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">group1</span><span class="p">,</span> <span class="n">group2</span><span class="p">,</span> <span class="n">equal_var</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span>
+     <span class="c1"># Degrees of freedom</span>
+     <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Degrees of freedom: &quot;</span><span class="p">)</span>
+     <span class="nb">print</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">group2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14771,15 +14916,34 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create three dataframes for each species without the species column</span>
 <span class="n">df1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span>
 <span class="n">df2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span>
 <span class="n">df3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">])</span>
-<span class="c1"># Generate anova table for all 4 attributes at once</span>
-<span class="n">anova_table</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">df3</span><span class="p">)</span>
+<span class="c1"># Perform independant t-test for different species for each and every attribute</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Versicolour-and-Setosa">Versicolour and Setosa<a class="anchor-link" href="#Versicolour-and-Setosa">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ind_test</span><span class="p">(</span><span class="n">df3</span><span class="p">,</span> <span class="n">df2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14796,12 +14960,10 @@ dtype: float64</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>One way ANOVA table: 
-F_onewayResult(statistic=array([ 119.26450218,   47.3644614 , 1179.0343277 ,  959.32440573]), pvalue=array([1.66966919e-31, 1.32791652e-16, 3.05197580e-91, 4.37695696e-85]))
-Df1: 
+<pre>Independent two sample t-test for groups with different means: 
+Ttest_indResult(statistic=array([10.52098627, -9.28277256, 39.46866259, 34.01237859]), pvalue=array([3.74674261e-17, 5.87960147e-15, 1.05721003e-45, 1.53779681e-47]))
+Degrees of freedom: 
 99
-Df2: 
-98
 </pre>
 </div>
 </div>
@@ -14813,7 +14975,89 @@ Df2:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The results show that all the p-values are much less than 0.05. This means that the null hypothesis that the means are the same for all 4 attributes (petal length, petal width, sepal length and sepal width) can be rejected.</p>
+<h4 id="Virginica-and-setosa">Virginica and setosa<a class="anchor-link" href="#Virginica-and-setosa">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ind_test</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Independent two sample t-test for groups with different means: 
+Ttest_indResult(statistic=array([15.38619582, -6.289385  , 49.96570336, 42.73822967]), pvalue=array([3.96686727e-25, 9.58603917e-09, 9.71386706e-50, 1.46674942e-48]))
+Degrees of freedom: 
+99
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Virginica-and-versicolor">Virginica and versicolor<a class="anchor-link" href="#Virginica-and-versicolor">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ind_test</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">df3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Independent two sample t-test for groups with different means: 
+Ttest_indResult(statistic=array([ 5.62916526,  3.20576075, 12.60377944, 14.62536705]), pvalue=array([1.86614439e-07, 1.81948348e-03, 4.90028753e-22, 2.11153440e-25]))
+Degrees of freedom: 
+99
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The results show that all the p-values are much less than 0.05 for all differences between the means for virginica, setosa and versicolor. This means that the null hypothesis that the means are the same for all 4 attributes (petal length, petal width, sepal length and sepal width) can be safely rejected.</p>
 
 </div>
 </div>
@@ -14821,7 +15065,7 @@ Df2:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.7-Correlations-between-pairs-of-attributes-">4.7 Correlations between pairs of attributes <a name="47" /><a class="anchor-link" href="#4.7-Correlations-between-pairs-of-attributes-">&#182;</a></h3><p>To determine how correlated (or related) the attributes of the species of flower are, Pearson's correlation coefficient is calculated. <a href="#ref7">7</a></p>
+<h3 id="4.7-Correlations-between-pairs-of-attributes-">4.7 Correlations between pairs of attributes <a name="47" /><a class="anchor-link" href="#4.7-Correlations-between-pairs-of-attributes-">&#182;</a></h3><p>To determine how correlated (or related) the attributes of the species of flower are, Pearson's correlation coefficient is calculated. <a href="#ref8">8</a></p>
 <p>The calculations of the correlation coefficients are given as follows:</p>
 
 </div>
@@ -14836,7 +15080,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr1</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;setosa&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;pearson&quot;</span><span class="p">)</span>
@@ -14853,7 +15097,7 @@ Df2:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -14931,7 +15175,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr2</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;virginica&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;pearson&quot;</span><span class="p">)</span>
@@ -14948,7 +15192,7 @@ Df2:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[54]:</div>
 
 
 
@@ -15026,7 +15270,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr3</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;versicolor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;pearson&quot;</span><span class="p">)</span>
@@ -15043,7 +15287,7 @@ Df2:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -15121,7 +15365,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Output correlation matrices to summary5.txt</span>
@@ -15138,7 +15382,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># These functions append (using mode=&#39;a&#39;) the correlations to summary5.txt for</span>
@@ -15191,7 +15435,7 @@ Df2:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This code takes each summary file and combines it into one file</span>
@@ -15260,7 +15504,7 @@ Df2:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>[1] Bari, A. et al. Predictive Analytics For Dummies.. Wiley, 2016. <a name="ref1"></a></p>
 <p>[2] Nelli, F.. Python Data Analytics: Data Analysis and Science using pandas, matplotlib and the Python Programming Language.. Apress, 2015. <a name="ref2"></a></p>
-<p>[3] Archive.ics.uci.edu, <a href="http://archive.ics.uci.edu/ml/datasets/iris">http://archive.ics.uci.edu/ml/datasets/iris</a>, last accessed 15/02/2020 <a name="ref3"></a></p>
+<p>[3] Archive.ics.uci.edu, <a href="http://archive.ics.uci.edu/ml/datasets/iris">http://archive.ics.uci.edu/ml/datasets/iris</a>, last accessed 15/04/2020 <a name="ref3"></a></p>
 <p>[4] Administration, U.S.F.. Fire Data Analysis Handbook; Second Edition.. Fema, 2004 <a name="ref4"></a></p>
 <p>[5] Surhone, L.M. et al. Shapiro-Wilk Test.. VDM Publishing, 2010. <a name="ref5"></a></p>
 <p>[6] Urdan, T.C.. Statistics in Plain English.. Lawrence Erlbaum Associates, 2005. <a name="ref6"></a></p>
