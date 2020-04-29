@@ -1,7 +1,7 @@
 # pands-project
 ##### Michael Alan Murphy-Quille
 <br>
-This repository contains the files **analysis.ipynb** , **iris.csv**, **analysis.html** ,  and **summary.txt** .
+This repository contains the files analysis.ipynb, iris.csv, analysis.html, and summary.txt.
 
 The read the report for this project, please open **analysis.html**. 
 
