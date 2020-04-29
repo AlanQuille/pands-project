@@ -1,7 +1,7 @@
 # pands-project
 ##### Michael Alan Murphy-Quille
 <br>
-This repository contains the files **analysis.ipynb**, **analysis.html**, **analysis.py** and **summary.txt**.
+This repository contains the files **analysis.ipynb**, **iris.csv**, **analysis.html**,  and **summary.txt**.
 
 The read the report for this project, please open **analysis.html**. 
 
@@ -17,13 +17,8 @@ This is a HTML version of **analysis.ipynb**. It contains all the data (but not 
 
 [https://github.com/AlanQuille/pands-project/blob/master/analysis.html](https://github.com/AlanQuille/pands-project/blob/master/analysis.html)
 
-## analysis.py
-This is a Python file containing the data and the functionality from **analysis.ipynb**. This file is supplementary to **analysis.ipynb** and **analysis.html**, it is present to allow one to test how the code from **analysis.ipynb** generates the summary.txt file. This file is **not** the primary report file. Link:
-
-[https://github.com/AlanQuille/pands-project/blob/master/analysis.py](https://github.com/AlanQuille/pands-project/blob/master/analysis.py)
-
 ## summary.txt
-This contains data output from analysis.ipynb or analysis.py using the
+This contains data output from analysis.ipynb using the class **output**, which uses the 
 **open**, **write** and **to_csv** functions (the latter from the **pandas** module). In particular, it contains:
 
 1. Means for setosa, virginica and versicolor respectively
@@ -32,6 +27,6 @@ This contains data output from analysis.ipynb or analysis.py using the
 4. Differences between means for versicolor/setosa, virginica/setosa and virginica/versicolor respectively.
 5. Correlation matrices for setosa, virginica and versicolour respectively.
 
-
-
+## iris.csv
+This contains the data for the Iris flower dataset. The reference for this data is present in the report (**analysis.ipynb** or **analysis.html**)
 
