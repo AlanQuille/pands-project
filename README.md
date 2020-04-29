@@ -12,6 +12,8 @@ This is the primary file of the project. It contains the report written in Jupyt
 
 **Note:** the table of contents (TOC) does not function from Github. Please open  **analysis.html** to read the project report with a functioning TOC. Alternatively, one can use Jupyter Notebook to open **analysis.ipynb**.
 
+Also, if Jupyter Notebook is used to run the code in this file, use Run All (or Run All Below from the very top of the file), otherwise the instances of the class **output** might not function correctly.
+
 ## analysis.html
 This is a HTML version of **analysis.ipynb**. It contains all the data (but not the functionality) from **analysis.ipynb**. Link:
 
