@@ -27,7 +27,7 @@ This contains data output from analysis.ipynb using the class **output**, which 
 2. Medians for setosa, virginica and versicolor respectively
 3. Percentage differences between medians and means for setosa, virginica and versicolor respectively.
 4. Differences between means for versicolor/setosa, virginica/setosa and virginica/versicolor respectively.
-5. Correlation matrices for setosa, virginica and versicolour respectively.
+5. Correlation matrices for setosa, virginica and versicolor respectively.
 
 ## iris.csv
 This contains the data for the Iris flower dataset. The reference for this data is present in the report (**analysis.ipynb** or **analysis.html**)
